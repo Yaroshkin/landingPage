@@ -2,11 +2,11 @@ from telebot import TeleBot
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
-bot_token = '6231927872:AAEJP7VLniSrRUJHA9g1U9deqxSkDJNUDzk'  # Замените на ваш токен бота
+bot_token = ''  
 bot = TeleBot(bot_token)
 
 def send_message_to_telegram(name, phone, email, message):
-    chat_id = '599486116'  # Замените на ваш Chat ID
+    chat_id = '' 
     text = f'Имя: {name}\nТелефон: {phone}\nEmail: {email}\nСообщение: {message}'
     bot.send_message(chat_id, text)
 
